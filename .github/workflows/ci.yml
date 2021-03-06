@@ -29,8 +29,7 @@ jobs:
       - name: Archive src folder
         uses: actions/upload-artifact@v2
         with:
-          name: nested folder
-          path: src
+          path: src/nested
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -45,9 +44,6 @@ jobs:
       # Download artefacts
       - name: Upload src contens
         uses: actions/download-artifact@v2
-        with:
-          name: nested folder
-          path: new-dir
       - name: show contents
         run: tree
       - name: read target file
