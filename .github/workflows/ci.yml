@@ -50,3 +50,5 @@ jobs:
           path: target
       - name: show contents
         run: tree
+      - name: read target file
+        run: car target/1.txt  
