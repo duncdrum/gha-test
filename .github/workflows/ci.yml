@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: nested folder
-          path: target
+          path: new-dir
       - name: show contents
         run: tree
       - name: read target file
