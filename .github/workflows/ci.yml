@@ -39,6 +39,7 @@ jobs:
           echo test, and deploy your project.
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == ('refs/heads/conditional-check' || 'refs/heads/main')
     needs: build
     steps:
       - uses: actions/checkout@v2
