@@ -26,8 +26,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo 'ref: ' ${{ github.ref }} 
-          echo "headref: " ${{ github.head.ref }}
-          echo "baseref: "${{ github.base.ref }}
+          echo "headref: " ${{ github.head_ref }}
+          echo "baseref: "${{ github.base_ref }}
   test:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/dont'
